@@ -3,6 +3,7 @@ body.style.color="#fff";
 body.style.backgroundColor="#000";
 
 let container = document.createElement("div");
+container.style.backgroundColor="#B6C4B6"
 container.style.height="80vh"
 container.style.display="flex";
 container.style.flexDirection="column"
@@ -105,12 +106,15 @@ function updateTable(form){
         formele.push("Food Preference");
         table=document.createElement("table");
         table.setAttribute("border",1);
+        table.style.backgroundColor="#EEF0E5";
+        table.style.color="#163020"
         table.style.borderCollapse = "collapse";
         table.style.marginTop="50px"
 
         let tablerow=document.createElement("tr");
         for(let i=0;i<formele.length;i++){
         let tablecell=document.createElement("th");
+        tablecell.style.backgroundColor=""
         tablecell.innerText=formele[i];
         tablerow.appendChild(tablecell);
         }
@@ -143,5 +147,8 @@ function updateTable(form){
         datarow.appendChild(datacell);
     }
     table.appendChild(datarow)
-    container.appendChild(table);
+    body.appendChild(table);
+    body.style.display="flex";
+    body.style.flexDirection="column"
+    body.style.justifyContent="center"
 }
